@@ -5,7 +5,7 @@ PKG_VERSION:=1
 PKG_RELEASE:=1
 
 PKG_LICENSE:=Apache-2.0
-PKG_MAINTAINER:=Your Name <you@example.com>
+PKG_MAINTAINER:=Thomas Richter <thomasesr@gmail.com>
 
 include $(INCLUDE_DIR)/package.mk
 
@@ -25,7 +25,8 @@ define Build/Compile
 endef
 
 define Package/luci-mod-network-kea/install
-	$(CP) ./root/* $(1)/
+	$(CP) ./luci-mod-network-kea/root/* $(1)/
 endef
 
 $(eval $(call BuildPackage,luci-mod-network-kea))
+EOF
