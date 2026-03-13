@@ -13,25 +13,25 @@ include $(INCLUDE_DIR)/package.mk
 
 define Package/luci-mod-network-kea
   SECTION:=luci
-    CATEGORY:=LuCI
-      SUBMENU:=3. Applications
-        TITLE:=Kea integration for LuCI network interface editor
-	  DEPENDS:=+luci-mod-network
-	  endef
+  CATEGORY:=LuCI
+  SUBMENU:=3. Applications
+  TITLE:=Kea integration for LuCI network interface editor
+  DEPENDS:=+luci-mod-network
+endef
 
 define Package/luci-mod-network-kea/description
  Adds Kea-aware DHCP tab behavior to LuCI interface editor.
- endef
+endef
 
 define Build/Prepare
 	mkdir -p $(PKG_BUILD_DIR)
-	endef
+endef
 
 define Build/Compile
 endef
 
 define Package/luci-mod-network-kea/install
 	$(CP) ./luci-mod-network-kea/root/* $(1)/
-	endef
+endef
 
 $(eval $(call BuildPackage,luci-mod-network-kea))
