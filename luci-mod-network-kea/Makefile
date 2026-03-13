@@ -14,7 +14,7 @@ include $(INCLUDE_DIR)/package.mk
 define Package/luci-mod-network-kea
   SECTION:=luci
   CATEGORY:=LuCI
-  SUBMENU:=3. Applications
+  SUBMENU:=2. Modules
   TITLE:=Kea integration for LuCI network interface editor
   DEPENDS:=+luci-mod-network
 endef
